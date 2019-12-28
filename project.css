@@ -2,13 +2,6 @@ body{
     background-image: url(https://www.cedricat.cat/pics/b/4/47825_plain-white-square-background.jpg);
 }
 
-#divtong{
-    height: 1000px;
-    width: 70%;
-    border: 1px solid black;
-    margin: auto;       
-}
-
 #logo{
     height: 200px;
     width: auto;
