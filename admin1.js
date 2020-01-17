@@ -4,7 +4,6 @@ function getDefaultPlayers() {
       'Image': '',
       'Club': '',
       'Position': '',
-      'Description': '',
       'Link': '',
       
       
@@ -194,7 +193,6 @@ function getDefaultPlayers() {
           <td><img width="50px" src="${players.Image}" alt ="đây là ảnh" ></td>
           <td>${players.Club}</td>
           <td>${players.Position}</td>
-          <td>${players.description}</td>
           <td>
             <button class="btn btn-success" onclick="editPlayers('${players.Name}')">Edit</button>
             <button class="btn btn-warning" onclick="deletePlayers('${players.Name}')">Delete</button>
@@ -222,7 +220,6 @@ function getDefaultPlayers() {
     document.getElementById('txteditClubs').value = currentPlayers.Club;
     document.getElementById('txteditPosition').value = currentPlayers.Position;
     document.getElementById('txteditImage').value = currentPlayers.Image;
-    document.getElementById('txteditDescription').value = currentPlayers.Description;
     document.getElementById('txteditLink').value = currentPlayers.Link;
   }
   
@@ -248,14 +245,12 @@ function getDefaultPlayers() {
     let Club = document.getElementById('txtClubs').value;
     let Position = document.getElementById('txtPosition').value;
     let Image = document.getElementById('txtImage').value;
-    let Description = document.getElementById('txtDes').value;
     let Link = document.getElementById('txtLink').value;
     let newPlayers = getDefaultPlayers();
     newPlayers.Name = Name;
     newPlayers.Club = Club;
     newPlayers.Position = Position;
     newPlayers.Image = Image;
-    newPlayers.Description = Description;
     newPlayers.Link = Link;
 
 
@@ -274,7 +269,6 @@ function getDefaultPlayers() {
     let Club = document.getElementById('txteditClubs').value;
     let Name = document.getElementById('txteditName').value;
     let Position = document.getElementById('txteditPosition').value;
-    let Description = document.getElementById('txteditDescription').value;
     let Image = document.getElementById('txteditImage').value;
     let Link = document.getElementById('txteditLink').value;
 
@@ -287,10 +281,9 @@ function getDefaultPlayers() {
         players.Club = Club;
         players.Position = Position;
         players.Image = Image;
-        players.Description = Description;
         players.Name = Name;
         players.Link = Link;
-        
+
 
         
         break;
