@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Admin</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+
+
+</head>
+<body>
+  <div id="container-fluid">
+    <div>
+        <ul class="menu">
+            <li class="active"><a href="admin.html">Clubs</a></li>
+
+            <li ><a href="admin1.html"> Players  </a></li>
+
+
+        </ul>
+    </div>
+</div>
+  <div class="container">
+    <h1>Admin manager</h1>
+    <div class="mb-3">
+      <button class="btn btn-primary" data-toggle="modal" data-target="#addClubs">Add Clubs</button>
+    </div>
+    <div>
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th>STT</th>
+            <th>Name</th>
+            <th>Logo</th>
+            <th>Stadium</th>
+            <th>Coach</th>
+            <th>Action</th>
+
+          </tr>
+        </thead>
+        <tbody id="list-clubs">
+
+        </tbody>
+
+
+      </table>
+    </div>
+  </div>
+
+  <div class="modal fade" id="addClubs">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <form id="frmnewPlayers" onsubmit="addClubs(event)">
+          <!-- Modal Header -->
+          <div class="modal-header">
+            <h4 class="modal-title">Modal Heading</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="form-group">
+              <label for="txtName">Name:</label>
+              <input type="text" required class="form-control" placeholder="Enter Name" id="txtName">
+            </div>
+            <div class="form-group">
+                <label for="txtLogo">Logo:</label>
+                <input type="text" required
+                 class="form-control" placeholder="Enter Logo" id="txtLogo">
+              </div>
+            <div class="form-group">
+              <label for="txtStadium">Stadium:</label>
+              <input type="text" required class="form-control" placeholder="Enter Stadium" id="txtStadium">
+            </div>
+            <div class="form-group">
+              <label for="txtCoach">Coach:</label>
+              <input type="text" class="form-control" placeholder="Enter Coach" id="txtCoach">
+            </div>
+            <div class="form-group">
+              <label for="txtSeeClubs">SeeClubs:</label>
+              <input type="text" class="form-control" placeholder="Enter Coach" id="txtSeeClubs">
+            </div>
+          </div>
+          <!-- Modal footer -->
+          <div class="modal-footer">
+            <button type="submit" class="btn btn-success">Save</button>
+            <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="editClubs">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <form id="frmeditClubs" onsubmit="saveClubs(event)">
+            <!-- Modal Header -->
+            <div class="modal-body">
+                <div class="form-group">
+                  <label for="txteditName">Name:</label>
+                  <input type="text" required class="form-control" placeholder="Enter Name" id="txteditName">
+                </div>
+                <div class="form-group">
+                    <label for="txtLogo">Logo:</label>
+                    <input type="text" required class="form-control" placeholder="Enter Logo" id="txteditLogo">
+                  </div>
+                <div class="form-group">
+                  <label for="txteditStadium">Stadium:</label>
+                  <input type="text" required class="form-control" placeholder="Enter Stadium" id="txteditStadium">
+                </div>
+                <div class="form-group">
+                  <label for="txteditCoach">Coach:</label>
+                  <input type="text" class="form-control" placeholder="Enter Coach" id="txteditCoach">
+                </div>
+                <div class="form-group">
+                  <label for="txteditSeeClubs">See clubs:</label>
+                  <input type="text" class="form-control" placeholder="Enter Coach" id="txteditSeeClubs">
+                </div>
+              </div>
+
+              
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-success">Save</button>
+              <button type="button" class="btn btn-outline-secondary" data-dismiss="modal">Cancel</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+  <script src="admin.js"></script>
+
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
